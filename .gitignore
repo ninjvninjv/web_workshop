@@ -2,5 +2,5 @@
 
 jen-only/
 
-vendor/node_modules/
-vendor/package-lock.json
+resources/vendor/node_modules/
+resources/vendor/package-lock.json

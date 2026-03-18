@@ -6,7 +6,7 @@
 //	npm install
 //	npm run build
 //
-// This will regenerate ../codemirror-bundle.js
+// This will regenerate ../js/codemirror-bundle.js
 
 import * as esbuild from 'esbuild';
 import { fileURLToPath } from 'url';
@@ -31,9 +31,9 @@ await esbuild.build({
 	},
 	bundle: true,
 	format: 'esm',
-	outfile: join(__dirname, '..', 'codemirror-bundle.js'),
+	outfile: join(__dirname, '..', 'js', 'codemirror-bundle.js'),
 	minify: true,
 	target: ['es2020'],
 });
 
-console.log('✓ CodeMirror bundle created: ../codemirror-bundle.js');
+console.log('✓ CodeMirror bundle created: ../js/codemirror-bundle.js');

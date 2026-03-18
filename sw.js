@@ -3,10 +3,10 @@ const urlsToCache = [
   '/web_workshop/',
   '/web_workshop/index.html',
   '/web_workshop/manifest.json',
-  '/web_workshop/resource-manifest.json',
-  '/web_workshop/styles.css',
-  '/web_workshop/main.js',
-  '/web_workshop/codemirror-bundle.js'
+  '/web_workshop/resources/resource-manifest.json',
+  '/web_workshop/resources/css/styles.css',
+  '/web_workshop/resources/js/main.js',
+  '/web_workshop/resources/js/codemirror-bundle.js'
 ];
 
 // Function to discover and cache all files in directories
@@ -44,7 +44,7 @@ async function cacheDirectoryFiles(cache, directories) {
 // Function to cache all resources using the generated manifest
 async function cacheResources(cache) {
   try {
-    const response = await fetch('/web_workshop/resource-manifest.json');
+    const response = await fetch('/web_workshop/resources/resource-manifest.json');
     if (response.ok) {
       const manifest = await response.json();
       console.log(`Caching ${manifest.images.length} images and ${manifest.resources.length} resources from manifest`);

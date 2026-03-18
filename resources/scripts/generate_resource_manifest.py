@@ -14,10 +14,10 @@ def generate_resource_manifest():
     # Define supported image extensions
     image_extensions = {'.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.ico', '.bmp'}
     
-    # Get the directory where this script is located
-    script_dir = Path(__file__).parent
-    images_dir = script_dir / 'images'
-    resources_dir = script_dir / 'resources'
+    # Get the repo root (two levels up from resources/scripts/)
+    repo_root = Path(__file__).parent.parent.parent
+    resources_dir = repo_root / 'resources'
+    images_dir = resources_dir / 'images'
     
     # Collect all image files
     image_files = []
@@ -25,7 +25,7 @@ def generate_resource_manifest():
         for file_path in images_dir.iterdir():
             if file_path.is_file() and file_path.suffix.lower() in image_extensions:
                 # Create relative path from web root (GitHub Pages subdirectory)
-                relative_path = f"/web_workshop/images/{file_path.name}"
+                relative_path = f"/web_workshop/resources/images/{file_path.name}"
                 image_files.append(relative_path)
     
     # Collect ALL resource files (no extension filtering)
@@ -49,7 +49,7 @@ def generate_resource_manifest():
     }
     
     # Write manifest file
-    manifest_path = script_dir / 'resource-manifest.json'
+    manifest_path = resources_dir / 'resource-manifest.json'
     with open(manifest_path, 'w', encoding='utf-8') as f:
         json.dump(manifest, f, indent=2, sort_keys=True)
     
@@ -63,4 +63,4 @@ def generate_resource_manifest():
 
 if __name__ == "__main__":
     manifest = generate_resource_manifest()
-    print(f"\nManifest saved to: resource-manifest.json")
+    print(f"\nManifest saved to: resources/resource-manifest.json")

@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 	<title>Web Workshop</title>
-	<link rel="icon" href="resources/construction.png">
+	<link rel="icon" href="resources/icons/construction.png">
 	<link rel="manifest" href="manifest.json">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="resources/css/styles.css">
 	<script type="module">
-		import {EditorView, keymap, placeholder, lineNumbers, Decoration, EditorState, Compartment, defaultKeymap, indentWithTab, undo, redo, undoDepth, redoDepth, history, historyKeymap, closeBrackets, closeBracketsKeymap, html, githubDark, indentUnit, search, searchKeymap, closeSearchPanel, openSearchPanel} from "./codemirror-bundle.js"
+		import {EditorView, keymap, placeholder, lineNumbers, Decoration, EditorState, Compartment, defaultKeymap, indentWithTab, undo, redo, undoDepth, redoDepth, history, historyKeymap, closeBrackets, closeBracketsKeymap, html, githubDark, indentUnit, search, searchKeymap, closeSearchPanel, openSearchPanel} from "./resources/js/codemirror-bundle.js"
 		window.CodeMirror = {EditorView, EditorState, Compartment, keymap, defaultKeymap, indentWithTab, html, githubDark, indentUnit, placeholder, undo, redo, undoDepth, redoDepth, history, historyKeymap, closeBrackets, closeBracketsKeymap, search, searchKeymap, closeSearchPanel, openSearchPanel, lineNumbers, Decoration};
 	</script>
 </head>
@@ -21,6 +21,6 @@
 		<iframe id="preview"></iframe>
 	</div>
 
-	<script type="module" src="main.js"></script>
+	<script type="module" src="resources/js/main.js"></script>
 </body>
 </html>

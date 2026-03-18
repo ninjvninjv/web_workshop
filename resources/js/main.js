@@ -6,7 +6,7 @@ const preview = document.getElementById('preview');
 let stockImages = new Map(); // lowercase -> original filename
 
 // Load stock image list from manifest
-const stockImagesReady = fetch('resource-manifest.json')
+const stockImagesReady = fetch('resources/resource-manifest.json')
 	.then(r => r.json())
 	.then(manifest => {
 		manifest.images.forEach(path => {
@@ -16,14 +16,14 @@ const stockImagesReady = fetch('resource-manifest.json')
 	})
 	.catch(() => console.log('Could not load resource manifest'));
 
-// Rewrite bare image filenames to use images/ prefix (case-insensitive, uses correct case)
+// Rewrite bare image filenames to use resources/images/ prefix (case-insensitive, uses correct case)
 function rewriteBareImageSrcs(html) {
 	// Rewrite <img src="filename.ext">
 	html = html.replace(/(<img\s[^>]*\bsrc\s*=\s*["'])([^"'/:]+\.(gif|png|jpg|jpeg|svg|webp))(["'])/gi,
 		(match, before, filename, ext, after) => {
 			const original = stockImages.get(filename.toLowerCase());
 			if (original) {
-				return before + 'images/' + original + after;
+				return before + 'resources/images/' + original + after;
 			}
 			return match;
 		});
@@ -32,7 +32,7 @@ function rewriteBareImageSrcs(html) {
 		(match, before, filename, ext, after) => {
 			const original = stockImages.get(filename.toLowerCase());
 			if (original) {
-				return before + 'images/' + original + after;
+				return before + 'resources/images/' + original + after;
 			}
 			return match;
 		});
@@ -45,7 +45,7 @@ function expandImagesTag(html) {
 		const images = Array.from(stockImages.values()).sort();
 		if (images.length === 0) return '<p>No images available</p>';
 		const rows = images.map(filename =>
-			`<tr class="stock-image-row" data-filename="${filename}" style="cursor:pointer;user-select:none;"><td>${filename}</td><td style="text-align:center;"><img src="images/${filename}" style="max-width:100%;height:auto;pointer-events:none;"></td></tr>`
+			`<tr class="stock-image-row" data-filename="${filename}" style="cursor:pointer;user-select:none;"><td>${filename}</td><td style="text-align:center;"><img src="resources/images/${filename}" style="max-width:100%;height:auto;pointer-events:none;"></td></tr>`
 		).join('');
 		return `<table class="stock-image-table" border="1" cellpadding="8" cellspacing="0" style="max-width:100%;box-sizing:border-box;table-layout:fixed;"><colgroup><col style="width:50%"><col style="width:50%"></colgroup>${rows}</table>`;
 	});
@@ -139,7 +139,7 @@ function updateMainPageTitleAndFavicon(title, favicon) {
 	if (favicon) {
 		faviconLink.href = favicon;
 	} else {
-		faviconLink.href = 'resources/construction.png';
+		faviconLink.href = 'resources/icons/construction.png';
 	}
 }
 
