@@ -2,7 +2,8 @@
 
 Craft handmade websites in their natural habitat (your web browser).
 
-<img src="resources/images/pika_construction.gif">
+<a href="https://hunterirving.github.io/web_workshop/">
+<img src="resources/images/pika_construction.gif"></a><br><br>
 
 Web Workshop was born as a teaching tool for web development classes, with the goal of making web publishing more accessible, especially to those who have never written code before.
 
@@ -61,6 +62,7 @@ Type `<!>` to insert the following starter HTML:
 <img src="resources/images/hint.gif" width=60px>
 <i>
 Wanna make websites on your phone? Try installing Web Workshop as a <a href="https://hunterirving.github.io/web_workshop/pages/pwa">Progressive Web App</a>!</i>
+<br>(You can install it as a desktop app, too...)
 
 ## Technologies Used
 
