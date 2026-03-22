@@ -3,11 +3,11 @@
 Craft handmade websites in their natural habitat (your web browser).
 
 <a href="https://hunterirving.github.io/web_workshop/">
-<img src="resources/images/pika_construction.gif"></a><br><br>
+<img src="resources/images/pika_construction.gif" width="155"></a><br><br>
 
 Web Workshop was born as a teaching tool for web development classes, with the goal of making web publishing more accessible, especially to those who have never written code before.
 
-By stripping away complexity and focusing on the basics, Web Workshop turns website building into something playful and toylike; a creative playground where you can experiment, break things, and watch your ideas materialize in real-time.
+By stripping away complexity and focusing on the basics, Web Workshop turns website building into something playful and toylike – a creative playground where you can experiment, break things, and watch your ideas materialize in real-time.
 
 <a href="https://hunterirving.github.io/web_workshop/">
 <img src="resources/readme_images/picnic.png" width="650"></a>
@@ -29,7 +29,7 @@ Recently, Web Workshop has become an editor of choice for <a href="https://html.
     - Your work is automatically saved, and restored when you reload the page
 3. Press `⌘ + S` to export your work as an HTML file (`⌘ + O` to open an existing file)
 
-### Stock Images
+## Stock Images
 A library of stock images is included for your convenience. To browse them, type `<img src="?">` anywhere in the editor pane, then click to select an image from the resulting table.
 
 <a href="https://hunterirving.github.io/web_workshop/">
@@ -38,7 +38,7 @@ A library of stock images is included for your convenience. To browse them, type
 
 Alternatively, if you know the name of the image you'd like to use, you can add it to your project like so: `<img src="coffee.gif">`.
 
-### Boilerplate
+## Boilerplate
 Type `<!>` to insert the following starter HTML:
 
 ```html
@@ -55,10 +55,11 @@ Type `<!>` to insert the following starter HTML:
 </html>
 ```
 
-### Options
+## Options
 - to toggle <b>line numbers</b>, press <kbd>F1</kbd> (disabled by default)
 - to toggle <b>line wrapping</b>, press <kbd>F2</kbd> (enabled by default)
 
+## Installation for Offline Use
 <img src="resources/images/hint.gif" width=60px>
 <i>
 Wanna make websites on your phone? Try installing Web Workshop as a <a href="https://hunterirving.github.io/web_workshop/pages/pwa">Progressive Web App</a>!</i>
