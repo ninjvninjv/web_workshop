@@ -29,6 +29,8 @@ Recently, Web Workshop has become an editor of choice for <a href="https://html.
     - Your work is automatically saved, and restored when you reload the page
 3. Press `⌘ + S` to export your work as an HTML file (`⌘ + O` to open an existing file)
 
+<img src="resources/images/hacking.gif" width="300">
+
 ## Stock Images
 A library of stock images is included for your convenience. To browse them, type `<img src="?">` anywhere in the editor pane, then click to select an image from the resulting table.
 
@@ -37,6 +39,8 @@ A library of stock images is included for your convenience. To browse them, type
 <br><br>
 
 Alternatively, if you know the name of the image you'd like to use, you can add it to your project like so: `<img src="coffee.gif">`.
+
+<img src="resources/images/coffee.gif">
 
 ## Boilerplate
 Type `<!>` to insert the following starter HTML:
