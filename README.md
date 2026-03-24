@@ -66,8 +66,7 @@ Type `<!>` to insert the following starter HTML:
 ## Installation for Offline Use
 <img src="resources/images/hint.gif" width=60px>
 <i>
-Wanna make websites on your phone? Try installing Web Workshop as a <a href="https://hunterirving.github.io/web_workshop/pages/pwa">Progressive Web App</a>!</i>
-<br>(You can install it as a desktop app, too...)
+Wanna make websites on your phone? Try installing Web Workshop as a <a href="https://hunterirving.github.io/web_workshop/pages/pwa">Progressive Web App</a>!</i> (You can install it as a desktop app, too...)
 
 ## Technologies Used
 
